@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f61717;
+    background-color: #2ebce3;
     color: #333;
     padding: 20px;
 }
@@ -105,3 +105,12 @@ footer {
 .back-button:hover {
     background-color: #0056b3;
 }
+
+caption{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    font-size: larger;
+    
+
+}
+

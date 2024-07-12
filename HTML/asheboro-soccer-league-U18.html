@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML and CSS</title>
+    <link rel="stylesheet" href="/CSS/css/styles.css">
+    <style>
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Sports Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gamedisplay.html">Games</a></li>
+            <li><a href="livegames.html">Watch</a></li>
+            <li><a href="leagues.html">Local Leagues</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section> 
+            <h2>Asheboro Soccer League U18</h2>
+            <p>
+                In this page, it will display the group that the user wants to see more information
+                about. It will display the teams, standings, and game schedules for the current week.
+            </p>
+            <table border="1">
+                <caption>U18 Group Schedule Matchday 1</caption>
+                <tr>
+                  <th>Teams</th>
+                  <th>Time</th>
+                  <th>Date</th>
+                  <th>Field</th>
+                </tr>
+                <tr>
+                  <td>Team A vs Team B </td>
+                  <td>2pm EST</td>
+                  <td>Sunday, August 11, 2024 </td>
+                  <td>Field 8 </td>
+                </tr>
+                <tr>
+                    <td>Team C vs Team D </td>
+                    <td>3pm EST</td>
+                    <td>Sunday, August 11, 2024 </td>
+                    <td>Field 8 </td>
+                  </tr>
+            </table>
+
+            <table>
+                <caption>Standings</caption>
+                <tr>
+                    <th>Place</th>
+                    <th>Team</th>
+                    <th>Points</th>
+                    <th>GD</th>
+                    <th>GF</th>
+                    <th>GA</th>
+                </tr>
+
+                <tr>
+                
+                    <td>1</td>
+                    <td>Team A</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+
+                <tr>
+                
+                    <td>2</td>
+                    <td>Team B</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+
+                <tr>
+                
+                    <td>3</td>
+                    <td>Team C</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+
+                <tr>
+                
+                    <td>4</td>
+                    <td>Team D</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+
+
+              
+            </table>
+            <button class="back-button" onclick="goBack()">Go Back</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sportapp</p>
+    </footer>
+</body>
+</html>
