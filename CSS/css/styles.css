@@ -51,7 +51,7 @@ section {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: center;  /* Center text-align for button centering */
+    text-align: center;
 }
 
 /* Table Styles */
@@ -110,7 +110,127 @@ caption{
     font-family: Arial, sans-serif;
     text-align:center;
     font-size: larger;
-    
+}
+
+/* Player Profile Styles */
+.player-profile {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px; /* Limit width for better readability */
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.player-profile ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.player-profile ul li {
+    margin-bottom: 10px;
+}
+
+.player-profile h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.player-profile p {
+    margin-bottom: 10px;
+}
+
+/* Login Page Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensures the container spans the full viewport height */
+    background-color: #2ebce3; /* Optional: Set a background color for clarity */
+}
+
+.login-form-container {
+    width: 320px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-form-container h3 {
+    margin-bottom: 20px; /* Fixed typo: '20x' to '20px' */
+    text-align: center;
+}
+
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.login-form-container p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-form-container p a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login-form-container p a:hover {
+    text-decoration: underline;
 
 }
 
+@media (max-width: 768px) {
+    .player-profile {
+        padding: 15px;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    .login-form-container {
+        width: 280px;
+    }
+}
