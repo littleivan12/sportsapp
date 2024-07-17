@@ -163,6 +163,13 @@ caption{
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: auto;
+    
+}
+
+.wrapper{
+    height: 50vh;
+    display:flex
 }
 
 .login-form-container h3 {
@@ -211,7 +218,7 @@ button:hover {
 }
 
 .login-form-container p a {
-    color: #007BFF;
+    color: #007cFF;
     text-decoration: none;
 }
 
