@@ -5,26 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple HTML and CSS</title>
     <link rel="stylesheet" href="/CSS/css/styles.css">
-    <style>
-        .back-button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: white;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
-        }
 
-        .back-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
     <script>
         function goBack() {
             window.history.back();
@@ -36,13 +17,22 @@
         <h1>Sports Website</h1>
     </header>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gamedisplay.html">Games</a></li>
-            <li><a href="livegames.html">Watch</a></li>
-            <li><a href="leagues.html">Local Leagues</a></li>
-        </ul>
+        <div class="nav-left">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gamedisplay.html">Games</a></li>
+                <li><a href="livegames.html">Watch</a></li>
+                <li><a href="leagues.html">Local Leagues</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <ul>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </div>
     </nav>
+
     <main>
         <section> 
             <h2>Asheboro Soccer League U18</h2>
