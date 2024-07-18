@@ -1,2 +1,2 @@
 # sportsapp
-This a sportsapp idea in which i have came up with during my stocking job. In this app , i will create a ESPN type app with a social media feel in this website. I would like to have this project protrotype by later this year . 
+This a sportsapp idea in which i have came up with during my stocking job. The idea behind sportapp is to user find local sports leagues around their communntiy. This is also a great tool for legaue owners to market their league in which players and fans can take apart of. This code doesnt have any backend code yet but will be applied in the future. Hopefully releasing the 1.0v in the holidays of 2024.
