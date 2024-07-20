@@ -203,8 +203,8 @@ caption {
 }
 
 .wrapper {
-    height: 50vh;
-    display: flex;
+    height: 50px;
+    display:flex;
 }
 
 .login-form-container h3 {

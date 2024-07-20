@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile: John Doe</title>
+    <link rel="stylesheet" href="/CSS/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sports Website</h1>
+    </header>
+    <nav>
+        <div class="nav-left">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gamedisplay.html">Games</a></li>
+                <li><a href="livegames.html">Watch</a></li>
+                <li><a href="leagues.html">Local Leagues</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <ul>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="userprofile.html">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="player-profile">
+            <h2>Edit Profile</h2>
+
+            <!-- Add save profile html soon .-->
+            <img src="path/to/profile-picture.jpg" alt="John Doe" class="profile-picture">
+            <form action="saveProfile.html" method="post">
+                <div>
+                    <label for="email"><strong>Email:</strong></label>
+                    <input type="email" id="email" name="email" value="john.doe@example.com">
+                </div>
+                <div>
+                    <label for="phone"><strong>Phone:</strong></label>
+                    <input type="tel" id="phone" name="phone" value="(123) 456-7890">
+                </div>
+            
+                <div>
+                    <label for="city"><strong>City:</strong></label>
+                    <input type="text" id="city" name="city" value="Sportstown">
+                </div>
+              
+                <div class="form-buttons">
+                    <button type="submit" class="save-button">Save Changes</button>
+                    <a href="userprofile.html" class="cancel-button">Cancel</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sportapp</p>
+    </footer>
+</body>
+</html>
