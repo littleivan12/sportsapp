@@ -5,12 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple HTML and CSS</title>
     <link rel="stylesheet" href="/CSS/css/styles.css">
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%;
+            max-width: 500px;
+            box-sizing: border-box;
+        }
+
+        /* Close button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Responsive form elements */
+        .modal-content form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-content form label,
+        .modal-content form textarea,
+        .modal-content form button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .modal-content form textarea {
+            resize: vertical;
+        }
+    </style>
+    <script>
+        // Function to open the modal
+        function openModal() {
+            document.getElementById('messageModal').style.display = 'block';
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById('messageModal').style.display = 'none';
+        }
+
+        // Function to go back in history
+        function goBack() {
+            window.history.back();
+        }
+
+        // Function to handle form submission
+        function sendMessage(event) {
+            event.preventDefault();
+            alert('Message sent to the captain!');
+            closeModal();
+        }
+    </script>
 </head>
-<script>
-    function goBack() {
-        window.history.back();
-    }
-</script>
 <body>
     <header>
         <h1>Sports Website</h1>
@@ -33,7 +110,7 @@
     </nav>
 
     <main>
-        <section> 
+        <section>
             <h2>Team Info</h2>
             <p>This is the team information that the user has created. It will show the team players, contact information, etc.</p>
             
@@ -43,7 +120,7 @@
                     <th>Players</th>
                 </tr>
                 <tr>
-                    <td><a href="player.html">John Doe</a></td>
+                    <td><a href="player.html">John Doe (Captain)</a></td>
                 </tr>
                 <tr>
                     <td>Jill Doe</td>
@@ -81,10 +158,23 @@
                 <li>Phone: (123) 456-7890</li>
                 <li>Address: 123 Sports St, Sportstown, ST 12345</li>
             </ul>
-
+            <button class="joinButton" onclick="openModal()">Request to Join Team</button>
             <button class="back-button" onclick="goBack()">Go Back</button>
         </section>
     </main>
+
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Please send a small message on why you want to join this team.</h2>
+            <form onsubmit="sendMessage(event)">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 Sportapp</p>
     </footer>
