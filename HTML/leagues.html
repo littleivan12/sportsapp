@@ -3,77 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple HTML and CSS</title>
+    <title>Local Leagues</title>
     <link rel="stylesheet" href="/CSS/css/styles.css">
+    .modal-content form input,
 </head>
 <body>
     <header>
         <h1>Sports Website</h1>
     </header>
     <nav>
-      <div class="nav-left">
-          <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="gamedisplay.html">Games</a></li>
-              <li><a href="livegames.html">Watch</a></li>
-              <li><a href="leagues.html">Local Leagues</a></li>
-          </ul>
-      </div>
-      <div class="nav-right">
-          <ul>
-              <li><a href="login.html">Log In</a></li>
-              <li><a href="signup.html">Sign Up</a></li>
-          </ul>
-      </div>
-  </nav>
+        <div class="nav-left">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gamedisplay.html">Games</a></li>
+                <li><a href="livegames.html">Watch</a></li>
+                <li><a href="leagues.html">Local Leagues</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <ul>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <main>
-        <section> 
-
-            <h2> Local Leagues </h2>
-            <p>This is the Local Leagues Page. This is where user can look up local leagues in there
-                area in which they can watch local league games or play in them ! The 
-                user can look up more infomation about the league by clicking on the leagues name. 
-                This will send them to another link refereing to the leagues infomation and contents. 
-            </p>
-       
+        <section>
+            <h2>Local Leagues</h2>
+            <p>This is the Local Leagues Page. Users can look up local leagues in their area to watch or play in. Click on the league names to view more details.</p>
         
-            
             <table border="1">
                 <tr>
-                  <th>League Name</th>
-                  <th>Location</th>
-                  <th>Dates</th>
-                  <th>Ages</th>
-                  <th>Format</th>
+                    <th>League Name</th>
+                    <th>Location</th>
+                    <th>Dates</th>
+                    <th>Ages</th>
+                    <th>Format</th>
                 </tr>
                 <tr>
-                  <td><a href="uncg-rec-soccer.html">UNCG Rec Soccer</a></td>
-                  <td>UNCG REC FIELD</td>
-                  <td>August 11 - October 24</td>
-                  <td>18+</td>
-                  <td>7v7</td>
+                    <td><a href="uncg-rec-soccer.html">UNCG Rec Soccer</a></td>
+                    <td>UNCG REC FIELD</td>
+                    <td>August 11 - October 24</td>
+                    <td>18+</td>
+                    <td>7v7</td>
                 </tr>
                 <tr>
-                  <td><a href="randleman-soccer-league.html">Randleman Soccer League</a></td>
-                  <td>Randleman, NC</td>
-                  <td>July 12 - August 31</td>
-                  <td>3-15</td>
-                  <td>11v11</td>
+                    <td><a href="randleman-soccer-league.html">Randleman Soccer League</a></td>
+                    <td>Randleman, NC</td>
+                    <td>July 12 - August 31</td>
+                    <td>3-15</td>
+                    <td>11v11</td>
                 </tr>
                 <tr>
-                  <td><a href="asheboro-soccer-league.html">Asheboro Soccer League</a></td>
-                  <td>ZooCity Sportsplex, Asheboro, NC</td>
-                  <td>August 30 - November 12</td>
-                  <td>All Ages</td>
-                  <td>8v8</td>
+                    <td><a href="asheboro-soccer-league.html">Asheboro Soccer League</a></td>
+                    <td>ZooCity Sportsplex, Asheboro, NC</td>
+                    <td>August 30 - November 12</td>
+                    <td>All Ages</td>
+                    <td>8v8</td>
                 </tr>
-              </table>
+            </table>
             
+            <!-- Button to open the add league modal -->
+            <button class="add-league-button" onclick="openModal('addLeagueModal')">Add New League</button>
         </section>
     </main>
+
+    <!-- Modal for adding a new league -->
+    <div id="addLeagueModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addLeagueModal')">&times;</span>
+            <h2>Add a New League</h2>
+            <form onsubmit="addLeague(event, 'addLeagueModal')">
+                <label for="leagueName">League Name:</label>
+                <input type="text" id="leagueName" name="leagueName" required>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+                <label for="dates">Dates:</label>
+                <input type="text" id="dates" name="dates" required>
+                <label for="ages">Ages:</label>
+                <input type="text" id="ages" name="ages" required>
+                <label for="format">Format:</label>
+                <input type="text" id="format" name="format" required>
+                <button type="submit">Add League</button>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 Sportapp</p>
     </footer>
+
+    <script src="/js/script.js"></script>
 </body>
 </html>
